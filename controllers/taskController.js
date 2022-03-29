@@ -3,7 +3,11 @@ const {Task, Category, User} = require('../models')
 class Controller{
     static async getTasks(req,res,next){
         try {
+            const userId = +req.user.id
             const getTasks = await Task.findAll({
+                where : {
+                    userId
+                },
                 attributes : {exclude : ["createdAt", "updatedAt"]},
                 include : Category
             })
@@ -16,7 +20,8 @@ class Controller{
 
     static async postTasks(req,res,next){
         try {
-            const{name,categoryId, userId} = req.body
+            const userId = +req.user.id
+            const{name,categoryId} = req.body
 
             if(!name || !categoryId || !userId) throw({name : 'input', message : 'Please input '})
 
