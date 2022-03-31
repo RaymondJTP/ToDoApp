@@ -21,6 +21,7 @@ const authentication = async(req,res,next) => {
             id : getUser.id,
             email : getUser.email
         }
+        
         next()
     } catch (err) {
         console.log(err.message);
