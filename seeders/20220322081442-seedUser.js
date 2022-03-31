@@ -10,6 +10,7 @@ module.exports = {
           password : 'passwordirfan',
           address: 'Bogor',
           age: 25,
+          role : 'manager',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -20,6 +21,7 @@ module.exports = {
           password : 'passwordbangdimas',
           address : 'Karawang',
           age: 27,
+          role : 'staff',
           createdAt: new Date(),
           updatedAt: new Date()
         }

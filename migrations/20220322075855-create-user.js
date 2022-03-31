@@ -25,6 +25,9 @@ module.exports = {
         type : Sequelize.STRING,
         allowNull: false
       },
+      role : {
+        type : Sequelize.STRING,
+      },
       address: {
         type: Sequelize.STRING
       },
